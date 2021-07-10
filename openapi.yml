@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: title
+  description: description
+  version: 0.1.0-SNAPSHOT
+paths:
+  /:
+    get:
+      operationId: get
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Consumer'
+components:
+  schemas:
+    Consumer:
+      type: object
+      properties:
+        foo:
+          type: string
